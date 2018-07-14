@@ -13,6 +13,7 @@ import hearthstonepic from "assets/img/projects/hearthstone.png";
 import giphypic from "assets/img/projects/giphy.png";
 import hangmanpic from "assets/img/projects/hangman.png";
 import rpspic from "assets/img/projects/rps.png";
+import liripic from "assets/img/projects/liri.png"
 import { Link } from 'react-router-dom'
 
 
@@ -172,6 +173,34 @@ class ProjectsSection extends React.Component {
                     className={classes.margin5}
                   >
                     <a href="https://github.com/picholasnaridon/React-Firebase-RockPaperScissors">
+                      <i className={classes.socials + " fab fa-github"} />
+                    </a>
+                  </Button>
+                </CardFooter>
+              </Card>
+            </GridItem>
+            <GridItem xs={12} sm={12} md={4}>
+              <Card plain>
+                <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
+                <a href="https://github.com/picholasnaridon/Liri"><img src={liripic} alt="..." className={imageClasses} /></a>
+                </GridItem>
+                <h4 className={classes.cardTitle}>
+                  Liri
+                  <br />
+                  <small className={classes.smallTitle}>Node.js</small>
+                </h4>
+                <CardBody>
+                  <p className={classes.description}>
+                    Super simple command line app for interacting with Twitter, Spotify and OMDB APIs. 
+                  </p>
+                </CardBody>
+                <CardFooter className={classes.justifyCenter}>
+                  <Button
+                    justIcon
+                    color="transparent"
+                    className={classes.margin5}
+                  >
+                    <a href="https://github.com/picholasnaridon/Liri">
                       <i className={classes.socials + " fab fa-github"} />
                     </a>
                   </Button>
