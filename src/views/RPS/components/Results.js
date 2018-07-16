@@ -27,76 +27,36 @@ class Results extends Component {
         var playerOneLosses = this.props.playerChoices[0].currentLosses
         var playerTwoWins = this.props.playerChoices[1].currentWins
         var playerTwoLosses = this.props.playerChoices[1].currentLosses
+
+        // possibilities resulting in wins for playerOne
+        var playerOneWinCombos = ['rs', 'pr', 'sp']
+        // map letters to words they represent
+        var choiceMap = { r: 'rock', p: 'paper', s: 'scissors' }
+
         console.log(playerOneName + " choice " + playerOneChoice)
         console.log(playerTwoName + " choice " + playerTwoChoice)
 
         if (playerOneChoice === playerTwoChoice) {
             return { tie: true }
-        } if (playerOneChoice === "r") {
-            if (playerTwoChoice === "s") {
-                return {
-                    tie: false,
-                    winnerChoice: "rock",
-                    winnerName: playerOneName,
-                    winnerId: playerOneId,
-                    winnerWins: playerOneWins,
-                    loserId: playerTwoId,
-                    loserLosses: playerTwoLosses
-                }
-            } else {
-                return {
-                    tie: false,
-                    winnerChoice: "paper",
-                    winnerName: playerTwoName,
-                    winnerId: playerTwoId,
-                    winnerWins: playerTwoWins,
-                    loserId: playerOneId,
-                    loserLosses: playerOneLosses
-                }
+        } else if (playerOneWinCombos.includes(playerOneChoice + playerTwoChoice)) {
+            return {
+                tie: false,
+                winnerChoice: choiceMap[playerOneChoice],
+                winnerName: playerOneName,
+                winnerId: playerOneId,
+                winnerWins: playerOneWins,
+                loserId: playerTwoId,
+                loserLosses: playerTwoLosses
             }
-        } if (playerOneChoice === "p") {
-            if (playerTwoChoice === "r") {
-                return {
-                    tie: false,
-                    winnerChoice: "paper",
-                    winnerName: playerOneName,
-                    winnerId: playerOneId,
-                    winnerWins: playerOneWins,
-                    loserId: playerTwoId,
-                    loserLosses: playerTwoLosses
-                }
-            } else {
-                return {
-                    tie: false,
-                    winnerChoice: "scissors",
-                    winnerName: playerTwoName,
-                    winnerId: playerTwoId,
-                    winnerWins: playerTwoWins,
-                    loserId: playerOneId,
-                    loserLosses: playerOneLosses
-                }
-            }
-        } if (playerOneChoice === "s") {
-            if (playerTwoChoice === "p") {
-                return {
-                    tie: false,
-                    winnerChoice: "scissors",
-                    winnerName: playerOneName,
-                    winnerId: playerOneId,
-                    winnerWins: playerOneWins,
-                    loserId: playerTwoId,
-                    loserLosses: playerTwoLosses
-                }
-            } else {
-                return {
-                    tie: false,
-                    winnerChoice: "rock",
-                    winnerName: playerTwoName,
-                    winnerId: playerTwoId,
-                    winnerWins: playerTwoWins,
-                    loserId: playerOneId,
-                    loserLosses: playerOneLosses
-                }
+        } else {
+            return {
+                tie: false,
+                winnerChoice: choiceMap[playerTwoChoice],
+                winnerName: playerTwoName,
+                winnerId: playerTwoId,
+                winnerWins: playerTwoWins,
+                loserId: playerOneId,
+                loserLosses: playerOneLosses
             }
         }
     }
