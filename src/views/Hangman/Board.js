@@ -7,16 +7,16 @@ import "./assets/styles/Board.css"
 const state_list = ["Alaska", "Alabama", "Arkansas", "Arizona", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Guam", "Hawaii", "Iowa", "Idaho", "Illinois", "Indiana", "Kansas", "Kentucky", "Louisiana", "Massachusetts", "Maryland", "Maine", "Michigan", "Minnesota", "Missouri", "Mississippi", "Montana", "NorthCarolina", "NorthDakota", "Nebraska", "NewHampshire", "NewJersey", "NewMexico", "Nevada", "NewYork", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Puerto Rico", "RhodeIsland", "SouthCarolina", "SouthDakota", "Tennessee", "Texas", "Utah", "Virginia", "Vermont", "Washington", "Wisconsin", "WestVirginia", "Wyoming"]
 
 class Board extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = {
             guesses: [],
-            letters:  (_.sample(state_list).toLowerCase()).split(""),
+            letters: (_.sample(state_list).toLowerCase()).split(""),
             correct: [],
             wins: 0,
             losses: 0
         }
-        
+
         this.addGuess = this.addGuess.bind(this)
         this.sendOutput = this.sendOutput.bind(this)
         this.updateScore = this.updateScore.bind(this)
@@ -26,9 +26,9 @@ class Board extends Component {
     addGuess(guess) {
         let currentGuesses = this.state.guesses.concat([guess])
         let letters = this.state.letters
-        var intersec =  currentGuesses.filter(function(n) {
-              return letters.indexOf(n) !== -1;
-          });
+        var intersec = currentGuesses.filter(function (n) {
+            return letters.indexOf(n) !== -1;
+        });
         console.log(intersec)
         this.setState({
             guesses: _.xor(this.state.guesses.concat([guess])),
@@ -36,21 +36,21 @@ class Board extends Component {
         })
     }
 
-    sendOutput(){
+    sendOutput() {
         var cor = this.state.correct
         var lets = this.state.letters
         var output = ""
-        _.forEach(lets, function(value){
-            if (_.includes(cor, value)){
+        _.forEach(lets, function (value) {
+            if (_.includes(cor, value)) {
                 output += value.toUpperCase() + " "
-            }else {
+            } else {
                 output += "_ "
             }
         })
         return output
     }
 
-    updateScore(){
+    updateScore() {
         this.setState({
             wins: this.state.wins += 1,
             letters: (_.sample(state_list).toLowerCase()).split(""),
@@ -59,15 +59,15 @@ class Board extends Component {
         })
     }
 
-    reset(){
-        if (this.state.guesses.length > 0 ){
-        this.setState({
-            losses: this.state.losses += 1,
-            letters: (_.sample(state_list).toLowerCase()).split(""),
-            guesses: [],
-            correct: []
+    reset() {
+        if (this.state.guesses.length > 0) {
+            this.setState({
+                losses: this.state.losses += 1,
+                letters: (_.sample(state_list).toLowerCase()).split(""),
+                guesses: [],
+                correct: []
             })
-        }else{
+        } else {
             alert("Give it a fucking try first asshole")
         }
     }
@@ -85,28 +85,28 @@ class Board extends Component {
                                 <DisplayWord
                                     output={this.sendOutput()}
                                 />
-                                <EnterGuess 
+                                <EnterGuess
                                     submitGuess={this.addGuess}
                                     giveUp={this.reset}
                                     currentGuessList={this.state.guesses}
                                     theLetters={this.state.letters}
                                 />
-                                <GuessList 
+                                <GuessList
                                     currentGuessList={this.state.guesses}
                                 />
-                                <Score 
+                                <Score
                                     output={this.sendOutput()}
                                     wins={this.state.wins}
                                     losses={this.state.losses}
                                     changeScore={this.updateScore}
                                 />
-                                <Button style={{backgroundGridor: "rgb(0, 188, 212)", Gridor: "white"}} onClick={this.reset}>Next Word </Button>
+                                <Button style={{ backgroundGridor: "rgb(0, 188, 212)", Gridor: "white" }} onClick={this.reset}>Next Word </Button>
                             </div>
                         </Paper>
                     </Grid>
                     <Grid lg={2} sm={0} md={2} xs={0} />
                 </Grid>
-            </div>  
+            </div>
         );
     }
 }
