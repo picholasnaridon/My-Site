@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
-import {base, app,} from '../base.js'
+import { base, app, } from '../base.js'
 import { Grid, Avatar } from '@material-ui/core'
 import '../assets/styles/App.css';
 
 
 class User extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = {
-          currentId: null,
+            currentId: null,
         }
-     this.componentCleanup = this.componentCleanup.bind(this)  
-     this.renderUser = this.renderUser.bind(this)
-     this.handleSelection = this.handleSelection.bind(this)
+        this.componentCleanup = this.componentCleanup.bind(this)
+        this.renderUser = this.renderUser.bind(this)
+        this.handleSelection = this.handleSelection.bind(this)
     }
 
-    componentDidMount(){
+    componentDidMount() {
         app.auth().signInAnonymously()
         app.auth().onAuthStateChanged(user => {
-          user
-            ? this.setState(() => ({currentId: user.uid }))
-            : this.setState(() => ({ currentId: null }));
+            user
+                ? this.setState(() => ({ currentId: user.uid }))
+                : this.setState(() => ({ currentId: null }));
         }).bind(this)
         window.addEventListener('beforeunload', this.componentCleanup)
     }
@@ -33,27 +33,27 @@ class User extends Component {
         window.removeEventListener('beforeunload', this.componentCleanup); // remove the event handler for normal unmounting
     }
 
-    handleSelection(selection){
+    handleSelection(selection) {
         console.log(selection)
         base.update(`game/users/${this.state.currentId}`, {
-            data: {selectionMade: true}, 
-          });
+            data: { selectionMade: true },
+        });
         base.push('game/playerChoices', {
-            data: {name: this.props.name, id: this.props.id, selection: selection, currentWins: this.props.wins, currentLosses: this.props.losses},
+            data: { name: this.props.name, id: this.props.id, selection: selection, currentWins: this.props.wins, currentLosses: this.props.losses },
         });
     }
 
-    renderUser(){
-        if((this.state.currentId === this.props.id) && (!this.props.selectionMade)){
-            return(
+    renderUser() {
+        if ((this.state.currentId === this.props.id) && (!this.props.selectionMade)) {
+            return (
                 <div className="currentPlayer">
                     <h3>Enter your selection</h3>
                     <Grid container={true} direction="row" justify="space-around" >
                         <Grid item={true}  >
-                            <Avatar onClick={() => this.handleSelection("r")}  alt="Rock" src={require ('../assets/images/rock.png')} />
+                            <Avatar onClick={() => this.handleSelection("r")} alt="Rock" src={require('../assets/images/rock.png')} />
                         </Grid>
                         <Grid item={true} >
-                            <Avatar onClick={() => this.handleSelection("p")} alt="Paper" src={require ('../assets/images/paper.png')} />
+                            <Avatar onClick={() => this.handleSelection("p")} alt="Paper" src={require('../assets/images/paper.png')} />
                         </Grid>
                         <Grid item={true} >
                             <Avatar onClick={() => this.handleSelection("s")} alt="Scissors" src={require('../assets/images/scissors.png')} />
@@ -62,24 +62,24 @@ class User extends Component {
                     <div>
                         <div>Wins: {this.props.wins}</div>
                         <div>losses: {this.props.losses}</div>
-                    </div>    
+                    </div>
                 </div>
             )
-        }else if (this.state.currentId === this.props.id ){
-            return(
+        } else if (this.state.currentId === this.props.id) {
+            return (
                 <div className="currentPlayer">
                     <h3> Waiting for Opponent to pick </h3>
                     <div>
                         <div>Wins: {this.props.wins}</div>
                         <div>losses: {this.props.losses}</div>
-                    </div>    
+                    </div>
                 </div>
             )
         }
     }
-    renderOponent(){
-        if((this.state.currentId !== this.props.id) && (!this.props.selectionMade)){
-            return(
+    renderOponent() {
+        if ((this.state.currentId !== this.props.id) && (!this.props.selectionMade)) {
+            return (
                 <div className="currentOpponent">
                     <h1>Opponent {this.props.name}</h1>
                     <div>
@@ -87,12 +87,12 @@ class User extends Component {
                         <div>
                             <div>Wins: {this.props.wins}</div>
                             <div>losses: {this.props.losses}</div>
-                        </div>    
+                        </div>
                     </div>
                 </div>
             )
-        }else if (this.state.currentId !== this.props.id ){
-            return(
+        } else if (this.state.currentId !== this.props.id) {
+            return (
                 <div className="currentOpponent">
                     <h1>Opponent {this.props.name}</h1>
                     <div>
@@ -100,14 +100,14 @@ class User extends Component {
                         <div>
                             <div>Wins: {this.props.wins}</div>
                             <div>losses: {this.props.losses}</div>
-                        </div>    
+                        </div>
                     </div>
                 </div>
             )
         }
     }
 
-   
+
 
     render() {
         return (

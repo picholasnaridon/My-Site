@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Input} from '@material-ui/core'
+import { Input } from '@material-ui/core'
 
 class EnterGuess extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = {
             currentGuess: ''
@@ -11,39 +11,39 @@ class EnterGuess extends Component {
         this.calcGuessLeft = this.calcGuessLeft.bind(this)
         this.theWord = this.theWord.bind(this)
     }
-    handleGuess(e){
+    handleGuess(e) {
         var guess = e.target.value
         this.props.submitGuess(guess)
         this.setState({
             currentGuess: ''
         })
     }
-    calcGuessLeft(){
+    calcGuessLeft() {
         return (this.props.theLetters.length - this.props.currentGuessList.length)
     }
-    theWord(){
+    theWord() {
         var word = this.props.theLetters.join("")
         return word.toUpperCase()
     }
     render() {
-        if (this.calcGuessLeft() > 0){
+        if (this.calcGuessLeft() > 0) {
             return (
                 <div>
-                        <Input
-                            value={this.state.currentGuess}
-                            onChange={this.handleGuess} 
-                        />
+                    <Input
+                        value={this.state.currentGuess}
+                        onChange={this.handleGuess}
+                    />
                     <div className="remaining">Remaining: {this.calcGuessLeft()}</div>
                 </div>
             );
-        }else {
+        } else {
             return (
                 <div className="loss">
-                    Ya Lost. The word was "{this.theWord()}"          
+                    Ya Lost. The word was "{this.theWord()}"
                 </div>
             );
         }
-        
+
     }
 }
 

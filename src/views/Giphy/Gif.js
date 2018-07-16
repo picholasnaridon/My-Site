@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class Gif extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = {
             clicked: false
@@ -12,27 +12,27 @@ class Gif extends Component {
 
     }
 
-    handleClick(){
+    handleClick() {
         this.setState({
             clicked: !this.state.clicked
         })
     }
 
-    renderStill(){
-        return(
-            <div style={{minWidth: "350px", minHeight: "350px"}}>
+    renderStill() {
+        return (
+            <div style={{ minWidth: "350px", minHeight: "350px" }}>
                 <h4>Rating: {this.props.rating.toUpperCase()}</h4>
-                <h3 style={{color: "red"}}>Off</h3>
-                <img style={{maxWidth: "300px", maxHeight: "300px"}} alt="gif" src={this.props.still} onClick={this.handleClick}/>
+                <h3 style={{ color: "red" }}>Off</h3>
+                <img style={{ maxWidth: "300px", maxHeight: "300px" }} alt="gif" src={this.props.still} onClick={this.handleClick} />
             </div>
         )
     }
-    renderMoving(){
-        return(
-            <div style={{minWidth: "350px", minHeight: "350px"}}>
+    renderMoving() {
+        return (
+            <div style={{ minWidth: "350px", minHeight: "350px" }}>
                 <h4>Rating: {this.props.rating.toUpperCase()}</h4>
-                <h3 style={{color: "green"}}>On</h3>
-                <img style={{maxWidth: "300px", maxHeight: "300px"}} alt="gif" src={this.props.moving} onClick={this.handleClick}/>
+                <h3 style={{ color: "green" }}>On</h3>
+                <img style={{ maxWidth: "300px", maxHeight: "300px" }} alt="gif" src={this.props.moving} onClick={this.handleClick} />
             </div>
         )
     }

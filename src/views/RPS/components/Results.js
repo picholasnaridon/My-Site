@@ -3,7 +3,7 @@ import { base } from '../base'
 
 
 class Results extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = {
             message: null
@@ -11,12 +11,12 @@ class Results extends Component {
         this.updateScores = this.updateScores.bind(this)
         this.checkResults = this.checkResults.bind(this)
     }
-    componentDidMount(){
+    componentDidMount() {
         var results = this.checkResults()
         this.updateScores(results)
-        
+
     }
-    checkResults(){
+    checkResults() {
         var playerOneChoice = this.props.playerChoices[0].selection
         var playerTwoChoice = this.props.playerChoices[1].selection
         var playerOneName = this.props.playerChoices[0].name
@@ -31,7 +31,7 @@ class Results extends Component {
         console.log(playerTwoName + " choice " + playerTwoChoice)
 
         if (playerOneChoice === playerTwoChoice) {
-            return {tie: true}
+            return { tie: true }
         } if (playerOneChoice === "r") {
             if (playerTwoChoice === "s") {
                 return {
@@ -88,7 +88,7 @@ class Results extends Component {
                     loserLosses: playerTwoLosses
                 }
             } else {
-               return {
+                return {
                     tie: false,
                     winnerChoice: "rock",
                     winnerName: playerTwoName,
@@ -100,7 +100,7 @@ class Results extends Component {
             }
         }
     }
-    updateScores(results){
+    updateScores(results) {
         console.log("winner id " + results.winnerId)
         console.log("loser id " + results.loserId)
         var playerOneId = this.props.playerChoices[0].id
@@ -108,33 +108,33 @@ class Results extends Component {
         console.log(results.winnerId)
         console.log(results.loserId)
 
-        if (results.tie === true){
+        if (results.tie === true) {
             this.setState({
                 message: "Tie Game!"
             })
-            setTimeout(function(){
+            setTimeout(function () {
                 base.remove(`/game/playerChoices/`)
                 base.update(`game/users/${playerOneId}`, {
-                    data: {selectionMade: false}, 
-                  });
+                    data: { selectionMade: false },
+                });
                 base.update(`game/users/${playerTwoId}`, {
-                    data: {selectionMade: false}, 
+                    data: { selectionMade: false },
                 });
             }, 3000)
-              
-        }else {
+
+        } else {
             this.setState({
                 message: `${results.winnerName} won with ${results.winnerChoice}!`
             })
-            setTimeout(function(){
+            setTimeout(function () {
                 base.remove(`/game/playerChoices/`)
                 base.update(`game/users/${results.loserId}`, {
-                    data: {losses: (results.loserLosses + 1), selectionMade: false}, 
+                    data: { losses: (results.loserLosses + 1), selectionMade: false },
                 });
                 base.update(`game/users/${results.winnerId}`, {
-                    data: {wins: (results.winnerWins + 1), selectionMade: false }, 
-                  });
-               
+                    data: { wins: (results.winnerWins + 1), selectionMade: false },
+                });
+
             }, 3000)
         }
 
