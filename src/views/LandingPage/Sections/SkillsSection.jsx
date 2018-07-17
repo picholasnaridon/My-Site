@@ -25,7 +25,7 @@ class SkillsSection extends React.Component {
           <GridItem xs={4} sm={4} md={2} lg={2}>
             <FontAwesomeIcon icon={faNodeJs} style={{ color: "#43853d" }} size="5x" />
           </GridItem>
-          <GridItem xs={4} sm={4} md={2} lg={2} style={{ marginTop: "1%" }}>
+          <GridItem xs={4} sm={4} md={2} lg={2}>
             <FontAwesomeIcon icon={faGithub} style={{ color: "#6e5494" }} size="5x" />
           </GridItem>
           <GridItem xs={12} sm={12} md={12} lg={12}>
