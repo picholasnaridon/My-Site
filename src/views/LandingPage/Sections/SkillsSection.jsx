@@ -3,7 +3,6 @@ import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import withStyles from "@material-ui/core/styles/withStyles";
-
 import { faReact, faCss3Alt, faHtml5, faJs, faNodeJs, faNpm, faGithub } from '@fortawesome/free-brands-svg-icons'
 import skillsStyle from "assets/jss/material-kit-react/views/landingPageSections/skillsStyle.jsx";
 
