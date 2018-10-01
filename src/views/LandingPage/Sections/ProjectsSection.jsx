@@ -40,7 +40,7 @@ class ProjectsSection extends React.Component {
 								<h4 className={classes.cardTitle}>
 									Follow Up
 									<br />
-									<small className={classes.smallTitle}>Ruby on Rails</small>
+									<small className={classes.smallTitle}>Node, React, MySQL</small>
 								</h4>
 								<CardBody>
 									<p className={classes.description}>
@@ -68,7 +68,7 @@ class ProjectsSection extends React.Component {
 								<h4 className={classes.cardTitle}>
 									NY Times React Search
 									<br />
-									<small className={classes.smallTitle}>Ruby on Rails</small>
+									<small className={classes.smallTitle}>Node, React, MongoDB</small>
 								</h4>
 								<CardBody>
 									<p className={classes.description}>
