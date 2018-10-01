@@ -8,17 +8,20 @@ import Card from 'components/Card/Card.jsx';
 import CardBody from 'components/Card/CardBody.jsx';
 import CardFooter from 'components/Card/CardFooter.jsx';
 import projectsStyle from 'assets/jss/material-kit-react/views/landingPageSections/projectsStyle.jsx';
-import starwarspic from 'assets/img/projects/starwars.png';
-import hearthstonepic from 'assets/img/projects/hearthstone.png';
-import giphypic from 'assets/img/projects/giphy.png';
-import hangmanpic from 'assets/img/projects/hangman.png';
-import rpspic from 'assets/img/projects/rps.png';
-import liripic from 'assets/img/projects/liri.png';
-import friendfinderpic from 'assets/img/projects/friendfinder.png';
-import burgerSQL from 'assets/img/projects/burgerSQL.png';
-import savethedate from 'assets/img/projects/savethedate.png';
-import nytreact from 'assets/img/projects/nyt-react.png';
-import followup from 'assets/img/projects/followup.png';
+import {
+	followup,
+	nytreact,
+	savethedate,
+	burgerSQL,
+	friendfinderpic,
+	liripic,
+	rpspic,
+	hangmanpic,
+	giphypic,
+	hearthstonepic,
+	starwarspic
+} from 'assets/img/projects/index.js';
+
 import { Link } from 'react-router-dom';
 
 class ProjectsSection extends React.Component {
