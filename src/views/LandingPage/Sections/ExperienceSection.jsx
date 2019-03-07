@@ -1,6 +1,6 @@
 import React from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
-import { pld, comcast, piano } from 'assets/img/icons/index.js';
+import { pld, frontline, piano } from 'assets/img/icons/index.js';
 import GridContainer from 'components/Grid/GridContainer.jsx';
 import GridItem from 'components/Grid/GridItem.jsx';
 import InfoArea from 'components/InfoArea/InfoArea.jsx';
@@ -20,10 +20,19 @@ class ExperienceSection extends React.Component {
 				</GridContainer>
 				<div>
 					<GridContainer>
+					<GridItem xs={12} sm={12} md={4}>
+							<InfoArea
+								title="Associate Software Developer"
+								description="Dec 2018 - Present. Backend C# developer role. Building out microservices and modernizing older enterprise code bases. "
+								icon={frontline}
+								iconColor="success"
+								vertical
+							/>
+						</GridItem>
 						<GridItem xs={12} sm={12} md={4}>
 							<InfoArea
 								title="Piano.io Client - Services Engineer"
-								description="June 2017 - Present. Engineering role focused around implementing Piano software into clients' codebase and building internal tools."
+								description="June 2017 - Dec 2018. Engineering role focused around implementing Piano software into clients' codebase and building internal tools."
 								icon={piano}
 								iconColor="info"
 								vertical
@@ -35,15 +44,6 @@ class ExperienceSection extends React.Component {
 								description="May 2015 - January 2017. Small SaaS startup selling a CRM and Sales platform. Responsible for technical support and requests from clients."
 								icon={pld}
 								iconColor="success"
-								vertical
-							/>
-						</GridItem>
-						<GridItem xs={12} sm={12} md={4}>
-							<InfoArea
-								title="Account Executive - Comcast"
-								description="​June 2013 - May 2015. Sales and Technical support for Comcast Business customers. "
-								icon={comcast}
-								iconColor="danger"
 								vertical
 							/>
 						</GridItem>

@@ -4,5 +4,6 @@ import piano from './piano.png';
 import pld from './pld.jpg';
 import upenn from './upenn.png';
 import comcast from './comcast.png';
+import frontline from './frontline.png'
 
-export { comcast, washcoll, launch, piano, pld, upenn };
+export { comcast, washcoll, launch, piano, pld, upenn, frontline };
