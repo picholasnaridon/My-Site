@@ -1,13 +1,13 @@
 import React from 'react';
 import classNames from 'classnames';
 import withStyles from '@material-ui/core/styles/withStyles';
-import GridContainer from 'components/Grid/GridContainer.jsx';
-import GridItem from 'components/Grid/GridItem.jsx';
-import Button from 'components/CustomButtons/Button.jsx';
-import Card from 'components/Card/Card.jsx';
-import CardBody from 'components/Card/CardBody.jsx';
-import CardFooter from 'components/Card/CardFooter.jsx';
-import projectsStyle from 'assets/jss/material-kit-react/views/landingPageSections/projectsStyle.jsx';
+import GridContainer from '../../../components/Grid/GridContainer.jsx';
+import GridItem from '../../../components/Grid/GridItem.jsx';
+import Button from '../../../components/CustomButtons/Button.jsx';
+import Card from '../../../components/Card/Card.jsx';
+import CardBody from '../../../components/Card/CardBody.jsx';
+import CardFooter from '../../../components/Card/CardFooter.jsx';
+import projectsStyle from '../../../assets/jss/material-kit-react/views/landingPageSections/projectsStyle.jsx';
 import {
 	followup,
 	nytreact,
@@ -20,7 +20,7 @@ import {
 	giphypic,
 	hearthstonepic,
 	starwarspic
-} from 'assets/img/projects/index.js';
+} from '../../../assets/img/projects/index.js';
 
 import { Link } from 'react-router-dom';
 

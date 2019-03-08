@@ -1,8 +1,8 @@
 import React from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import contactStyle from "assets/jss/material-kit-react/views/landingPageSections/contactStyle.jsx";
+import GridContainer from "../../../components/Grid/GridContainer.jsx";
+import GridItem from "../../../components/Grid/GridItem.jsx";
+import contactStyle from "../../../assets/jss/material-kit-react/views/landingPageSections/contactStyle.jsx";
 
 class WorkSection extends React.Component {
   render() {

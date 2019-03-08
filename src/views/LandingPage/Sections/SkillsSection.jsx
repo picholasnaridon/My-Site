@@ -1,10 +1,10 @@
 import React from 'react';
-import GridContainer from 'components/Grid/GridContainer.jsx';
-import GridItem from 'components/Grid/GridItem.jsx';
+import GridContainer from '../../../components/Grid/GridContainer.jsx';
+import GridItem from '../../../components/Grid/GridItem.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import withStyles from '@material-ui/core/styles/withStyles';
 import { faReact, faCss3Alt, faHtml5, faJs, faNodeJs, faNpm, faGithub } from '@fortawesome/free-brands-svg-icons';
-import skillsStyle from 'assets/jss/material-kit-react/views/landingPageSections/skillsStyle.jsx';
+import skillsStyle from '../../../assets/jss/material-kit-react/views/landingPageSections/skillsStyle.jsx';
 
 class SkillsSection extends React.Component {
 	render() {

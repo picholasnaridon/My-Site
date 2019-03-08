@@ -1,10 +1,10 @@
 import React from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
-import { launch, washcoll, upenn } from 'assets/img/icons/index.js';
-import GridContainer from 'components/Grid/GridContainer.jsx';
-import GridItem from 'components/Grid/GridItem.jsx';
-import InfoArea from 'components/InfoArea/InfoArea.jsx';
-import educationStyle from 'assets/jss/material-kit-react/views/landingPageSections/experienceStyle.jsx';
+import { launch, washcoll, upenn } from '../../../assets/img/icons/index.js';
+import GridContainer from '../../../components/Grid/GridContainer.jsx';
+import GridItem from '../../../components/Grid/GridItem.jsx';
+import InfoArea from '../../../components/InfoArea/InfoArea.jsx';
+import educationStyle from '../../../assets/jss/material-kit-react/views/landingPageSections/experienceStyle.jsx';
 
 class EducationSection extends React.Component {
 	render() {

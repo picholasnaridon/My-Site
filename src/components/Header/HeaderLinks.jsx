@@ -4,8 +4,8 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import Tooltip from "@material-ui/core/Tooltip";
-import Button from "components/CustomButtons/Button.jsx"; 
-import headerLinksStyle from "assets/jss/material-kit-react/components/headerLinksStyle.jsx";
+import Button from "../../components/CustomButtons/Button.jsx"; 
+import headerLinksStyle from "../../assets/jss/material-kit-react/components/headerLinksStyle.jsx";
 
 function HeaderLinks({ ...props }) {
   const { classes } = props;
