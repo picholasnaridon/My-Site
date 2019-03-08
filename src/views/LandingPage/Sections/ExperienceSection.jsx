@@ -1,11 +1,11 @@
 import React from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
-import { pld, frontline, piano } from 'assets/img/icons/index.js';
-import GridContainer from 'components/Grid/GridContainer.jsx';
-import GridItem from 'components/Grid/GridItem.jsx';
-import InfoArea from 'components/InfoArea/InfoArea.jsx';
+import { pld, frontline, piano } from '../../../assets/img/icons/index.js';
+import GridContainer from '../../../components/Grid/GridContainer'
+import GridItem from '../../../components/Grid/GridItem.jsx';
+import InfoArea from '../../../components/InfoArea/InfoArea.jsx';
 
-import experienceStyle from 'assets/jss/material-kit-react/views/landingPageSections/experienceStyle.jsx';
+import experienceStyle from '../../../assets/jss/material-kit-react/views/landingPageSections/experienceStyle.jsx';
 
 class ExperienceSection extends React.Component {
 	render() {
