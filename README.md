@@ -14,9 +14,9 @@ npm i && npm start
 # Run with Docker
 
 ```
-docker run -p 49160:3000 -d <username>/<container_name>
+docker build -t <username>/<container_name> .
 ```
 
 ```
-docker build -t <username>/<container_name> .
+docker run -p 49160:3000 -d <username>/<container_name>
 ```
