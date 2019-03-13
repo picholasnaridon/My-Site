@@ -24,3 +24,12 @@ npm i && npm run dev
 ```
 
 ![my site picture](https://i.imgur.com/qNIZc6C.png[/img])
+
+
+```
+docker run -p 49160:3000 -d <username>/<container_name>
+```
+
+```
+ docker build -t <username>/<container_name> .
+ ```
