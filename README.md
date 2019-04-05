@@ -1,6 +1,6 @@
 # [NickParidon.com](https://www.nickparidon.com)
 
-React app built to display contact information and projects.
+React app built to display contact information and projects. Build and start with either the `npm` or `docker` commands below
 
 ![my site picture](https://i.imgur.com/qNIZc6C.png[/img])
 
