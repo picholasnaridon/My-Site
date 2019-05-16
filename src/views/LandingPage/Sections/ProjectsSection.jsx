@@ -27,7 +27,7 @@ import { Link } from 'react-router-dom';
 class ProjectsSection extends React.Component {
 	render() {
 		const { classes } = this.props;
-		const imageClasses = classNames(classes.imgRaised, classes.imgRoundedCircle, classes.imgFluid);
+		const imageClasses = classNames(classes.imgRaised, classes.imgRounded, classes.imgFluid);
 		return (
 			<div className={classes.section}>
 				<h2 className={classes.title}>Projects</h2>
