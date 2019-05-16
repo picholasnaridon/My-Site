@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
 import withStyles from '@material-ui/core/styles/withStyles';
-import Avatar from '@material-ui/core/Avatar';
 import Header from '../../components/Header/Header.jsx';
 import GridContainer from '../../components/Grid/GridContainer.jsx';
 import GridItem from '../../components/Grid/GridItem.jsx';
@@ -33,14 +32,13 @@ class LandingPage extends React.Component {
 				<Parallax filter image={require('../../assets/img/philly.jpg')}>
 					<div className={classes.container}>
 						<GridContainer>
-							<GridItem xs={12} sm={12} md={6}>
-								<Avatar className={classes.avatar} src={Mepic} />
-								<h1 className={classes.title}>Web Developer</h1>
+							<GridItem xs={12} sm={12} md={6} style={{alignContent: "center"}}>
+								<img src={Mepic} alt="me" style={{width: "95px", height: "100px", borderRadius: "10%"}} />
+								<h1 className={classes.title}>Nick Paridon</h1>
 								<h4>
-									Hi everyone, my name is Nick. I am currently working as a Client Services Engineer
-									for a company called Piano.io here in Philadelphia. I am constantly learning new
-									languages and technologies, but my experience thus far has been mainly in Ruby on
-									Rails and Node.Js from a backend perspective and React.Js on the frontend.
+									Hi everyone, my name is Nick. I am currently working as a C#/.NET developer
+									for a company called Frontline Education in the Philadelphia suburbs. Some examples
+									of my work are listed below, which are a mix of mainly Ruby on Rails, Node.JS and React.
 								</h4>
 								<h4>
 									In my spare time I love swimming, hiking and hanging with my friends and family.
