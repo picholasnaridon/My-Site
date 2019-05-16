@@ -7,8 +7,8 @@ import liripic from './liri.png';
 import friendfinderpic from './friendfinder.png';
 import burgerSQL from './burgerSQL.png';
 import savethedate from './savethedate.png';
-import nytreact from './nyt-react.png';
-import followup from './followup.png';
+import nytreact from './NYTBlack.png';
+import followup from './followUpBlack.png';
 
 export {
 	starwarspic,
