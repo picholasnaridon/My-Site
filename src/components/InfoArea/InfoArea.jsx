@@ -22,7 +22,7 @@ function InfoArea({ ...props }) {
   return (
     <div className={classes.infoArea}>
       <div className={iconWrapper}>
-        <img src={props.icon} className={iconClasses} alt="info"/>
+        <img src={props.icon} className={iconClasses} style={{borderRadius: "5%"}} alt="info"/>
       </div>
       <div className={classes.descriptionWrapper}>
         <h4 className={classes.title}>{title}</h4>
