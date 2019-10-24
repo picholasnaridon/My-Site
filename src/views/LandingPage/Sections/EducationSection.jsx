@@ -27,7 +27,7 @@ class EducationSection extends React.Component {
 								iconColor="danger"
 								vertical
 							/> */}
-						</GridItem> */}
+						</GridItem>
 						<GridItem xs={12} sm={12} md={4}>
 							<InfoArea
 								title="Washington College"
