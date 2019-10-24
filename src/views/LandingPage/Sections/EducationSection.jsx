@@ -19,7 +19,7 @@ class EducationSection extends React.Component {
 				</GridContainer>
 				<div>
 					<GridContainer>
-						<GridItem xs={12} sm={12} md={4}>
+						{/* <GridItem xs={12} sm={12} md={4}>
 							<InfoArea
 								title="University of Pennsylvania"
 								description="2018 - Six month course focused around  fullstack JavaScript. Learned Node.JS on the backend and continued working with React.Js on the frontend"
@@ -27,7 +27,7 @@ class EducationSection extends React.Component {
 								iconColor="danger"
 								vertical
 							/>
-						</GridItem>
+						</GridItem> */}
 						<GridItem xs={12} sm={12} md={4}>
 							<InfoArea
 								title="Washington College"
@@ -37,7 +37,7 @@ class EducationSection extends React.Component {
 								vertical
 							/>
 						</GridItem>
-						<GridItem xs={12} sm={12} md={4}>
+						{/* <GridItem xs={12} sm={12} md={4}>
 							<InfoArea
 								title="Launch Academy"
 								description="Fullstack Ruby on Rails program. Went through the fundamentals of things like test driven development and object oriented programming."
@@ -45,7 +45,7 @@ class EducationSection extends React.Component {
 								iconColor="success"
 								vertical
 							/>
-						</GridItem>
+						</GridItem> */}
 					</GridContainer>
 				</div>
 			</div>
