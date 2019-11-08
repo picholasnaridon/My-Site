@@ -20,10 +20,19 @@ class ExperienceSection extends React.Component {
 				</GridContainer>
 				<div>
 					<GridContainer>
-					<GridItem xs={12} sm={12} md={4}>
+						<GridItem xs={12} sm={12} md={4}>
+							<InfoArea
+									title="Software Developer"
+									description="Nov. 2019 - Present. Focusing on C#/.NET Core microservices and Angular UI components."
+									icon={frontline}
+									iconColor="success"
+									vertical
+								/>
+						</GridItem>
+						<GridItem xs={12} sm={12} md={4}>
 							<InfoArea
 								title="Associate Software Developer"
-								description="Dec 2018 - Present. Backend C# developer role. Building out microservices and modernizing older enterprise code bases. "
+								description="Dec. 2018 - Nov. 2019 Backend C# developer role. Building out microservices and modernizing older VB.NET code base. "
 								icon={frontline}
 								iconColor="success"
 								vertical
@@ -32,18 +41,9 @@ class ExperienceSection extends React.Component {
 						<GridItem xs={12} sm={12} md={4}>
 							<InfoArea
 								title="Piano.io Client - Services Engineer"
-								description="June 2017 - Dec 2018. Engineering role focused around implementing Piano software into clients' codebase and building internal tools."
+								description="June 2017 - Dec. 2018. Engineering role focused around implementing Piano software into clients' codebase and building internal tools."
 								icon={piano}
 								iconColor="info"
-								vertical
-							/>
-						</GridItem>
-						<GridItem xs={12} sm={12} md={4}>
-							<InfoArea
-								title="PipelineDeals - Technical Support"
-								description="May 2015 - January 2017. Small SaaS startup selling a CRM and Sales platform. Responsible for technical support and requests from clients."
-								icon={pld}
-								iconColor="success"
 								vertical
 							/>
 						</GridItem>
