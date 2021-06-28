@@ -1,6 +1,6 @@
 import React from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
-import { launch, washcoll, upenn } from '../../../assets/img/icons/index.js';
+import { washcoll } from '../../../assets/img/icons/index.js';
 import GridContainer from '../../../components/Grid/GridContainer.jsx';
 import GridItem from '../../../components/Grid/GridItem.jsx';
 import InfoArea from '../../../components/InfoArea/InfoArea.jsx';
@@ -20,13 +20,6 @@ class EducationSection extends React.Component {
 				<div>
 					<GridContainer>
 						<GridItem xs={12} sm={12} md={4}>
-							{/* <InfoArea
-								title="University of Pennsylvania"
-								description="2018 - Six month course focused around  fullstack JavaScript. Learned Node.JS on the backend and continued working with React.Js on the frontend"
-								icon={upenn}
-								iconColor="danger"
-								vertical
-							/> */}
 						</GridItem>
 						<GridItem xs={12} sm={12} md={4}>
 							<InfoArea
@@ -38,13 +31,6 @@ class EducationSection extends React.Component {
 							/>
 						</GridItem>
 						<GridItem xs={12} sm={12} md={4}>
-							{/* <InfoArea
-								title="Launch Academy"
-								description="Fullstack Ruby on Rails program. Went through the fundamentals of things like test driven development and object oriented programming."
-								icon={launch}
-								iconColor="success"
-								vertical
-							/> */}
 						</GridItem>
 					</GridContainer>
 				</div>

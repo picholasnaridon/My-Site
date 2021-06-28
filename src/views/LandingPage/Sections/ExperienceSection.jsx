@@ -22,12 +22,30 @@ class ExperienceSection extends React.Component {
 					<GridContainer>
 						<GridItem xs={12} sm={12} md={4}>
 							<InfoArea
-									title="Software Developer"
-									description="Nov. 2019 - Present. Focusing on C#/.NET Core microservices and Angular UI components."
-									icon={frontline}
-									iconColor="success"
-									vertical
-								/>
+								title="Senior Software Engineer"
+								description="Jun. 2021 - Present. Focusing on C#/.NET Core microservices and Angular UI components."
+								icon={frontline}
+								iconColor="success"
+								vertical
+							/>
+						</GridItem>
+						<GridItem xs={12} sm={12} md={4}>
+							<InfoArea
+								title="Software Engineer II"
+								description="Aug. 2020 - Jun 2021. Focusing on C#/.NET Core microservices and Angular UI components."
+								icon={frontline}
+								iconColor="success"
+								vertical
+							/>
+						</GridItem>
+						<GridItem xs={12} sm={12} md={4}>
+							<InfoArea
+								title="Software Engineer"
+								description="Nov. 2019 - Aug 2020. Focusing on C#/.NET Core microservices and Angular UI components."
+								icon={frontline}
+								iconColor="success"
+								vertical
+							/>
 						</GridItem>
 						<GridItem xs={12} sm={12} md={4}>
 							<InfoArea
