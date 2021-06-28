@@ -28,7 +28,7 @@ class ProjectsSection extends React.Component {
 							<Card plain>
 								<GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
 									<a href="https://followup-crm.herokuapp.com">
-										<img src={followup} alt="hearthstone" className={imageClasses} />
+										<img src={followup} alt="Follow Up" className={imageClasses} />
 									</a>
 								</GridItem>
 								<h4 className={classes.cardTitle}>
